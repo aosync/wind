@@ -156,7 +156,7 @@
 		       (lex-symbol3 buf)
 		       (lex-symbol2 buf)
 		       (lex-symbol1 buf))
-	:when (not (find (token-type token) exclude))
+	:unless (find (token-type token) exclude)
 	  :do (return token)))
 
 ;; TESTS
